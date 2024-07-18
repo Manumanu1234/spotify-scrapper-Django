@@ -1,0 +1,138 @@
+
+
+
+.album-num {
+	position: absolute;
+	left: 0;
+	top: -18px;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1;
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.album-title {
+	text-align: left;
+	position: relative;
+}
+
+.emblem-container {
+	--emblem-size: 280px;
+	height: var(--emblem-size);
+	width: var(--emblem-size);
+	position: absolute;
+	z-index: 2;
+	transform: translate(calc(var(--album-size) / 2), -40%);
+}
+
+.emblem {
+	font-size: 24px;
+	color: var(--color-light);
+	text-transform: lowercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center center;
+	animation: rotating 10s linear infinite;
+	height: 100%;
+	width: 100%;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Each letter of emblem */
+.emblem span {
+	position: absolute;
+	display: flex;
+	height: inherit;
+	width: 0;
+	justify-content: center;
+	align-items: flex-end;
+	transform-origin: center center;
+	width: 20px;
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.emblem,
+
+
+.album-transition {
+	animation: 0.6s ease-out album-transition;
+}
+
+.show-texts {
+	opacity: 1;
+	transform: translateY(0px);
+	transition-property: opacity, transform;
+	transition-duration: 1.4s, 0.5s;
+}
+
+.hide-arrow {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.spotify-widget {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	gap: 20px;
+    align-items: center;
+	width: var(--album-size);
+	z-index: 100;
+	margin-bottom: 8px;
+}
+
+.spotify-widget iframe {
+	border-radius: 12px;
+}
+
+@keyframes album-transition {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	:root {
+		--album-size: 80vw;
+	}
+
+	.hero-img {
+		height: 100%;
+	}
+
+	.spotify-widget {
+		margin-bottom: 24px;
+	}
+}
+
+
+@media only screen and (max-height: 740px) {
+	.emblem-container {
+		--emblem-size: 200px;
+	}
+	.emblem {
+		font-size: 20px;
+	}
+	.button-container {
+		padding: 8px 5vw 8px;
+	}
+	.spotify-widget {
+		margin-bottom: 0px;
+	}
+}

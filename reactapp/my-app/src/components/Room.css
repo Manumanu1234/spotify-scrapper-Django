@@ -1,0 +1,333 @@
+.createroomhead{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+.vote{
+    border: none;
+    border-bottom: 2px solid black;
+}
+.vote:target{
+    border: none;
+}
+
+
+
+
+.component {
+    background-color: white;
+    width: 25%;
+    max-width: 600px;
+    margin: 1em auto;
+    padding-bottom: 2em;
+    border: 0.5px solid rgba(12, 202, 69, 0.726);
+    border-radius: 10px;
+  }
+  
+  .musicCover {
+    border-radius: 10%;
+    max-width: 70%;
+    max-height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .playButton {
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subTitle {
+    margin-top: -1em;
+    color: #4f4f4f;
+  }
+  
+  .time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+    font-size: smaller;
+  }
+  
+  .timeline {
+    width: 80%;
+    background-color: #27ae60;
+  }
+  
+  input[type="range"] {
+    background-color: #27ae60;
+  }
+  
+  @media (max-width: 900px) {
+    .component {
+      width: 50%;
+    }
+  }
+  
+
+  .roomcode{
+    text-align: start;
+    margin-left: 25px;
+  }
+
+
+
+  .playistdownload{
+    margin-top: 50px;
+    margin-bottom: 40px;    
+  }
+
+  .musics{
+    margin-bottom: 50px;   
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Optional: Adds a border to the button */
+    padding: 10px 20px;       /* Adjust padding as needed */
+    font-size: 16px;          /* Adjust font size as needed */
+    cursor: pointer;          /* Changes cursor to pointer on hover */
+    border-radius: 5px;       /* Optional: Rounds the corners of the button */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+
+  .musics1{
+
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Optional: Adds a border to the button */
+    padding: 10px 20px;       /* Adjust padding as needed */
+    font-size: 16px;          /* Adjust font size as needed */
+    cursor: pointer;          /* Changes cursor to pointer on hover */
+    border-radius: 5px;       /* Optional: Rounds the corners of the button */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+
+  .leaveandsetting{
+    margin-top: -60px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: end;
+    
+  }
+
+  .newpageblack{
+    background-color: black;
+    height: 1300px;
+    margin-top: -10px;
+  }
+
+
+
+.create{
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.homepage{
+  width: 100%;
+  height: 800px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.join:hover{
+  cursor: pointer;
+}
+
+.dark1{
+color: #ffffff;
+text-align: center;
+}
+
+
+.typewriter h1 
+{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  font-weight: bold;
+  font-family: cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.codes{
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+.createroomhead {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Adjust width as needed */
+  margin: auto; /* Center the element */
+}
+
+/* Style labels and inputs */
+.createroomhead label {
+  display: block;
+  margin: 10px 0;
+}
+
+.createroomhead input[type="radio"] {
+  margin-right: 5px;
+}
+
+.createroomhead input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #222;
+  color: white;
+}
+
+.createroomhead button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createroomhead button:hover {
+  background-color: #ddd;
+}
+
+
+
